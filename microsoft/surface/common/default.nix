@@ -13,45 +13,56 @@ let
     versions
     ;
 
-  # Set the version and hash for the kernel sources
+  # Kernel source version
   srcVersion =
     with config.hardware.microsoft-surface;
     if kernelVersion == "longterm" then
       "6.12.19"
     else if kernelVersion == "stable" then
-      "6.15.9"
+      "6.16.9"
     else
       abort "Invalid kernel version: ${kernelVersion}";
 
+  # Kernel source hash
   srcHash =
     with config.hardware.microsoft-surface;
     if kernelVersion == "longterm" then
       "sha256-1zvwV77ARDSxadG2FkGTb30Ml865I6KB8y413U3MZTE="
     else if kernelVersion == "stable" then
-      "sha256-6U86+FSSMC96gZRBRY+AvKCtmRLlpMg8aZ/zxjxSlX0="
+      "sha256-esjIo88FR2N13qqoXfzuCVqCb/5Ve0N/Q3dPw7ZM5Y0="
     else
       abort "Invalid kernel version: ${kernelVersion}";
 
-  # Set the version and hash for the linux-surface releases
+  # linux-surface version
   pkgVersion =
     with config.hardware.microsoft-surface;
     if kernelVersion == "longterm" then
       "6.12.7"
     else if kernelVersion == "stable" then
-      "6.15.3"
+      "6.16.9"
     else
       abort "Invalid kernel version: ${kernelVersion}";
 
+  # linux-surface hash
   pkgHash =
     with config.hardware.microsoft-surface;
     if kernelVersion == "longterm" then
       "sha256-Pv7O8D8ma+MPLhYP3HSGQki+Yczp8b7d63qMb6l4+mY="
     else if kernelVersion == "stable" then
-      "sha256-ozvYrZDiVtMkdCcVnNEdlF2Kdw4jivW0aMJrDynN3Hk="
+      "sha256-grZY2DvEjRrr55D9Ov3I5NpXjgxB7z6bYn8K7iO8fOk="
     else
       abort "Invalid kernel version: ${kernelVersion}";
 
-  # Fetch the linux-surface package
+  # linux-surface commit
+  pkgRev = with config.hardware.microsoft-surface;
+    if kernelVersion == "longterm" then
+      "arch-${pkgVersion}-1"
+    else if kernelVersion == "stable" then
+      "35f8449d5f9351db93447129fab67f22e8b73d3a"
+    else
+      abort "Invalid kernel version: ${kernelVersion}";
+
+  # Fetch the linux-surface repository
   repos =
     pkgs.callPackage
       (
@@ -71,10 +82,10 @@ let
       )
       {
         hash = pkgHash;
-        rev = "arch-${pkgVersion}-1";
+        rev = pkgRev;
       };
 
-  # Fetch and build the kernel package
+  # Fetch and build the kernel source after applying the linux-surface patches
   inherit (pkgs.callPackage ./kernel/linux-package.nix { inherit repos; })
     linuxPackage
     surfacePatches
