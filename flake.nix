@@ -20,6 +20,7 @@
           apple-imac-18-2 = import ./apple/imac/18-2;
           apple-macbook-air-3 = import ./apple/macbook-air/3;
           apple-macbook-air-4 = import ./apple/macbook-air/4;
+          apple-macbook-air-5 = import ./apple/macbook-air/5;
           apple-macbook-air-6 = import ./apple/macbook-air/6;
           apple-macbook-air-7 = import ./apple/macbook-air/7;
           apple-macbook-pro = import ./apple/macbook-pro;
@@ -42,6 +43,7 @@
           asus-flow-gv302x-amdgpu = import ./asus/flow/gv302x/amdgpu;
           asus-flow-gv302x-nvidia = import ./asus/flow/gv302x/nvidia;
           asus-pro-ws-x570-ace = import ./asus/pro-ws-x570-ace;
+          asus-rog-gl552vw = import ./asus/rog-gl552vw;
           asus-rog-strix-g513im = import ./asus/rog-strix/g513im;
           asus-rog-strix-g533zw = import ./asus/rog-strix/g533zw;
           asus-rog-strix-g533q = import ./asus/rog-strix/g533q;
@@ -141,6 +143,7 @@
           friendlyarm-nanopc-t4 = import ./friendlyarm/nanopc-t4;
           friendlyarm-nanopi-r5s = import ./friendlyarm/nanopi-r5s;
           focus-m2-gen1 = import ./focus/m2/gen1;
+          fydetab-duo = import ./fydetab/duo;
           gigabyte-b550 = import ./gigabyte/b550;
           gigabyte-b650 = import ./gigabyte/b650;
           gmktec-nucbox-g3-plus = import ./gmktec/nucbox/g3-plus;
@@ -216,6 +219,7 @@
           lenovo-thinkpad-p14s-amd-gen3 = import ./lenovo/thinkpad/p14s/amd/gen3;
           lenovo-thinkpad-p14s-amd-gen4 = import ./lenovo/thinkpad/p14s/amd/gen4;
           lenovo-thinkpad-p14s-amd-gen5 = import ./lenovo/thinkpad/p14s/amd/gen5;
+          lenovo-thinkpad-p14s-intel-gen2 = import ./lenovo/thinkpad/p14s/intel/gen2;
           lenovo-thinkpad-p14s-intel-gen3 = import ./lenovo/thinkpad/p14s/intel/gen3;
           lenovo-thinkpad-p14s-intel-gen5 = import ./lenovo/thinkpad/p14s/intel/gen5;
           lenovo-thinkpad-p16s-amd-gen1 = import ./lenovo/thinkpad/p16s/amd/gen1;
@@ -233,6 +237,8 @@
           lenovo-thinkpad-t14-amd-gen3 = import ./lenovo/thinkpad/t14/amd/gen3;
           lenovo-thinkpad-t14-amd-gen4 = import ./lenovo/thinkpad/t14/amd/gen4;
           lenovo-thinkpad-t14-amd-gen5 = import ./lenovo/thinkpad/t14/amd/gen5;
+          lenovo-thinkpad-t14-intel-gen1 = import ./lenovo/thinkpad/t14/intel/gen1;
+          lenovo-thinkpad-t14-intel-gen1-nvidia = import ./lenovo/thinkpad/t14/intel/gen1/nvidia;
           lenovo-thinkpad-t14-intel-gen6 = import ./lenovo/thinkpad/t14/intel/gen6;
           lenovo-thinkpad-t14s = import ./lenovo/thinkpad/t14s;
           lenovo-thinkpad-t14s-amd-gen1 = import ./lenovo/thinkpad/t14s/amd/gen1;
@@ -299,7 +305,9 @@
           lenovo-yoga-7-14IAH7-hybrid = import ./lenovo/yoga/7/14IAH7/hybrid;
           lenovo-yoga-7-14ILL10 = import ./lenovo/yoga/7/14ILL10;
           lenovo-yoga-7-slim-gen8 = import ./lenovo/yoga/7/slim/gen8;
+          letsnote-cf-lx3 = import ./panasonic/letsnote/cf-lx3;
           letsnote-cf-lx4 = import ./panasonic/letsnote/cf-lx4;
+          linglong-nova-studio = import ./linglong/nova-studio;
           malibal-aon-s1-intel = import ./malibal/aon/s1;
           mechrevo-gm5hg0a = import ./mechrevo/GM5HG0A;
           microchip-icicle-kit = import ./microchip/icicle-kit;
@@ -311,9 +319,11 @@
           microsoft-surface-pro-9 = import ./microsoft/surface-pro/9;
           milkv-pioneer = import ./milkv/pioneer;
           minisforum-v3 = import ./minisforum/v3;
+          mnt-reform-rk3588 = import ./mnt/reform/rk3588;
           morefine-m600 = import ./morefine/m600;
           msi-b350-tomahawk = import ./msi/b350-tomahawk;
           msi-b550-a-pro = import ./msi/b550-a-pro;
+          msi-b550-tomahawk = import ./msi/b550-tomahawk;
           msi-gs60 = import ./msi/gs60;
           msi-gl62 = import ./msi/gl62;
           msi-gl65-10SDR-492 = import ./msi/gl65/10SDR-492;
