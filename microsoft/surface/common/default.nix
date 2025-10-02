@@ -19,7 +19,7 @@ let
     if kernelVersion == "longterm" then
       "6.12.19"
     else if kernelVersion == "stable" then
-      "6.16.10"
+      "6.16.9"
     else
       abort "Invalid kernel version: ${kernelVersion}";
 
@@ -29,7 +29,7 @@ let
     if kernelVersion == "longterm" then
       "sha256-1zvwV77ARDSxadG2FkGTb30Ml865I6KB8y413U3MZTE="
     else if kernelVersion == "stable" then
-      "sha256-esjIo88FR2N13qqoXfzuCVqCb/5Ve0N/Q3dPw7ZM5Y0="
+      "sha256-qwa7qIUeS2guiDT2+Q5W0y3PmNjGLNU3Z2EEz9dXqPI="
     else
       abort "Invalid kernel version: ${kernelVersion}";
 
@@ -39,7 +39,7 @@ let
     if kernelVersion == "longterm" then
       "6.12.7"
     else if kernelVersion == "stable" then
-      "6.16.10"
+      "6.16.9"
     else
       abort "Invalid kernel version: ${kernelVersion}";
 
@@ -54,11 +54,12 @@ let
       abort "Invalid kernel version: ${kernelVersion}";
 
   # linux-surface commit
-  pkgRev = with config.hardware.microsoft-surface;
+  pkgRev =
+    with config.hardware.microsoft-surface;
     if kernelVersion == "longterm" then
-      "arch-${pkgVersion}-1"
+      "add4c31a06d80393e34b6cae07f0f6c92fb2ec31"
     else if kernelVersion == "stable" then
-      "35f8449d5f9351db93447129fab67f22e8b73d3a"
+      "94217c2dc8818afd2296c3776223fc1c093f78fb"
     else
       abort "Invalid kernel version: ${kernelVersion}";
 
