@@ -17,7 +17,7 @@ let
   srcVersion =
     with config.hardware.microsoft-surface;
     if kernelVersion == "longterm" then
-      "6.12.19"
+      "6.12.58"
     else if kernelVersion == "stable" then
       "6.15.9"
     else
@@ -26,7 +26,7 @@ let
   srcHash =
     with config.hardware.microsoft-surface;
     if kernelVersion == "longterm" then
-      "sha256-1zvwV77ARDSxadG2FkGTb30Ml865I6KB8y413U3MZTE="
+      "sha256-XxxMVGZgpqgQRv36YZUwa60sjRfA1ph23BAKha1GE6w="
     else if kernelVersion == "stable" then
       "sha256-6U86+FSSMC96gZRBRY+AvKCtmRLlpMg8aZ/zxjxSlX0="
     else
