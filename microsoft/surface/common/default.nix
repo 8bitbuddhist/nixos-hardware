@@ -19,7 +19,7 @@ let
     if kernelVersion == "longterm" then
       "6.12.19"
     else if kernelVersion == "stable" then
-      "6.15.9"
+      "6.17.10"
     else
       abort "Invalid kernel version: ${kernelVersion}";
 
@@ -28,7 +28,7 @@ let
     if kernelVersion == "longterm" then
       "sha256-1zvwV77ARDSxadG2FkGTb30Ml865I6KB8y413U3MZTE="
     else if kernelVersion == "stable" then
-      "sha256-6U86+FSSMC96gZRBRY+AvKCtmRLlpMg8aZ/zxjxSlX0="
+      "sha256-+n80TzpQ2tCvLgBm1RvTuRg/0kWHhhBCND3tPR/VyM0="
     else
       abort "Invalid kernel version: ${kernelVersion}";
 
